@@ -14,36 +14,30 @@ input = Console.ReadLine();
 num2 = Convert.ToInt32(input);
 
 // Operations (+,-,/,*)
-if (operation == "+")
+switch (operation)
 {
-    result = num1 + num2;
-    Console.Write("Result: ");
-    Console.WriteLine(result);
-    Console.ReadKey();
-}
-else if (operation == "-") 
-{
-    result = num1 - num2;
-    Console.Write("Result: ");
-    Console.WriteLine(result);
-    Console.ReadKey();
-}
-else if (operation == "*")
-{
-    result = num1 * num2;
-    Console.Write("Result: ");
-    Console.WriteLine(result);
-    Console.ReadKey();
-}
-else if (operation == "/")
-{
-    result = num1 / num2;
-    Console.Write("Result: ");
-    Console.WriteLine(result);
-    Console.ReadKey();
-}
-else
-{
-    Console.WriteLine("Invalid operation");
-    Console.ReadKey();
+    case "+":
+        result = num1 + num2;
+        Console.WriteLine($"Result: {num1}+{num2}={result}");
+        Console.ReadKey();
+        break;
+    case "-":
+        result = num1 - num2;
+        Console.WriteLine($"Result: {num1}-{num2}={result}");
+        Console.ReadKey();
+        break;
+    case "*":
+        result = num1 * num2;
+        Console.WriteLine($"Result: {num1}*{num2}={result}");
+        Console.ReadKey();
+        break;
+    case "/":
+        result = num1 / num2;
+        Console.WriteLine($"Result: {num1}/{num2}={result}");
+        Console.ReadKey();
+        break;
+    default:
+        Console.WriteLine("Invalid Operation");
+        Console.ReadKey();
+        break;
 }
